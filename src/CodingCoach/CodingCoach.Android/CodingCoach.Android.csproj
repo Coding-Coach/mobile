@@ -43,12 +43,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.2.3</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
@@ -92,6 +96,10 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\CodingCoach.Core\CodingCoach.Core.csproj">
+      <Project>{db00c6ce-8796-4701-80c7-380626e6c756}</Project>
+      <Name>CodingCoach.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CodingCoach\CodingCoach.csproj">
       <Project>{2E4D14F3-73E1-4477-A5B9-02B575EDD960}</Project>
       <Name>CodingCoach</Name>

@@ -1,25 +1,14 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Android.OS;
+using MvvmCross.Forms.Platforms.Android.Core;
+using MvvmCross.Forms.Platforms.Android.Views;
 
 namespace CodingCoach.Droid
 {
-    [Activity(Label = "CodingCoach", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-    {
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+   [Activity( Label        = "CodingCoach", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
+      ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation )]
+   public class MainActivity : MvxFormsAppCompatActivity<MvxFormsAndroidSetup<Core.App, CodingCoach.App>, Core.App, CodingCoach.App>
+   {
 
-            base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
-        }
-    }
+   }
 }
