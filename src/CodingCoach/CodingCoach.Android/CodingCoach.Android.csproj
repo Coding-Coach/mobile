@@ -96,8 +96,8 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CodingCoach.Core\CodingCoach.Core.csproj">
-      <Project>{db00c6ce-8796-4701-80c7-380626e6c756}</Project>
+    <ProjectReference Include="..\CodingCoach.Core\CodingCoach.Core.csproj">
+      <Project>{241e3f8e-9b74-474a-8710-b9f084f79c52}</Project>
       <Name>CodingCoach.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\CodingCoach\CodingCoach.csproj">
