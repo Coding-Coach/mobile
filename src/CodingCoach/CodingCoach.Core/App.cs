@@ -12,7 +12,7 @@ namespace CodingCoach.Core
             .EndingWith("Service")
             .AsInterfaces()
             .RegisterAsLazySingleton();
-         RegisterAppStart<HomeViewModel>();
+         RegisterAppStart<MentorsViewModel>();
       }
    }
 }

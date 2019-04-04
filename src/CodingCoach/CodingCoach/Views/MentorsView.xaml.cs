@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace CodingCoach.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomeView : MvxContentPage
+	public partial class MentorsView : MvxContentPage
 	{
-		public HomeView ()
+		public MentorsView ()
 		{
 			InitializeComponent ();
 		}
