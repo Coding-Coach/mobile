@@ -3,6 +3,7 @@
              xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="CodingCoach.Views.ItemsPage"
              Title="{Binding Title}"
+             class="page"
              x:Name="BrowseItemsPage">
 
     <ContentPage.Resources>
@@ -15,6 +16,7 @@
 
     <StackLayout>
         <ListView
+            class="mentor-list"
             HasUnevenRows="true"
             SeparatorVisibility="None"
             ItemsSource="{Binding Mentors}">

@@ -1,4 +1,12 @@
-﻿.mentor-card {
+﻿.page {
+
+}
+
+.mentor-list {
+	margin-top: 5;
+}
+
+.mentor-card {
 	border-color: gray;
 	margin-left: 20;
 	margin-right: 20;
