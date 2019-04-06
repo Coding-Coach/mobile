@@ -1,5 +1,7 @@
-﻿using Android.App;
+using Android.App;
 using Android.Content.PM;
+using Android.OS;
+using ImageCircle.Forms.Plugin.Droid;
 using MvvmCross.Forms.Platforms.Android.Core;
 using MvvmCross.Forms.Platforms.Android.Views;
 
@@ -9,6 +11,12 @@ namespace CodingCoach.Droid
       ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation )]
    public class MainActivity : MvxFormsAppCompatActivity<MvxFormsAndroidSetup<Core.App, CodingCoach.App>, Core.App, CodingCoach.App>
    {
-
+      protected override void OnCreate( Bundle bundle )
+      {
+         ImageCircleRenderer.Init();   
+         // TODO: add also to the ios configuration
+         // TODO: not working
+         base.OnCreate( bundle );
+      }
    }
 }

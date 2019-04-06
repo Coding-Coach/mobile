@@ -1,5 +1,13 @@
-﻿listView image {
-	width: 90;
+﻿.mentor-card {
+	border-color: gray;
+	margin-left: 20;
+	margin-right: 20;
+	margin-bottom: 5;
+}
+
+.mentor-image {
+	width: 120;
+	height: 120;
 }
 
 .mentor-description {
