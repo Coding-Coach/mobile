@@ -21,25 +21,37 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame class="mentor-card">
+                        <Grid>
                             <StackLayout
-                                Orientation="Vertical">
-                                <abstractions:CircleImage Source="{Binding Avatar}" BorderColor="Gray"
-                                                          BorderThickness="1"
-                                                          HeightRequest="90"
-                                                          WidthRequest="90"
-                                                          Aspect="AspectFill"
-                                                          HorizontalOptions="Center" />
-                                <Label Text="{Binding Name}"
-                                       HorizontalOptions="Center"
-                                       TextColor="Red" />
-                                <Label Text="{Binding Title}"
-                                       HorizontalOptions="Center"
-                                       TextColor="#503026" />
-                                <Label Text="{Binding Description}" StyleClass="mentor-description"
-                                       HorizontalOptions="Center" />
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Padding="0,35,0,10">
+                                <Frame BackgroundColor="Transparent"
+                                       class="mentor-card">
+                                    <StackLayout Padding="5,30,5,10"
+                                        Orientation="Vertical">
+                                        <Label Text="{Binding Name}"
+                                               HorizontalOptions="Center"
+                                               TextColor="Red" />
+                                        <Label Text="{Binding Title}"
+                                               HorizontalOptions="Center"
+                                               TextColor="#503026" />
+                                        <Label Text="{Binding Description}" StyleClass="mentor-description"
+                                               HorizontalOptions="Center" />
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
-                        </Frame>
+                            <abstractions:CircleImage
+                                VerticalOptions="Start"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Source="{Binding Avatar}" BorderColor="Gray"
+                                BorderThickness="1"
+                                HeightRequest="90"
+                                WidthRequest="90"
+                                Aspect="AspectFill"
+                                HorizontalOptions="Center" />
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
