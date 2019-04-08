@@ -33,11 +33,11 @@
                                     <StackLayout Padding="5,30,5,10"
                                         Orientation="Vertical">
                                         <Label Text="{Binding Name}"
-                                               HorizontalOptions="Center"
-                                               TextColor="Red" />
+                                               class="mentor-name"
+                                               HorizontalOptions="Center" />
                                         <Label Text="{Binding Title}"
                                                HorizontalOptions="Center"
-                                               TextColor="#503026" />
+                                               class="mentor-title" />
                                         <Label Text="{Binding Description}" StyleClass="mentor-description"
                                                HorizontalOptions="Center" />
                                     </StackLayout>

@@ -16,6 +16,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Assets\Card.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="mentors.json" />
   </ItemGroup>
 

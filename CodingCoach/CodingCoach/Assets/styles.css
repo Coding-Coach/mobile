@@ -18,8 +18,30 @@
 	height: 120;
 }
 
-.mentor-description {
-	font-size: 8;
-	color: gray;
+.mentor-name {
+	color: #4a4a4a;
+	font-size: 20;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 5;
+}
 
+.mentor-title {
+	color: #999;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 5;
+}
+
+.mentor-description {
+	font-style: italic;
+	background: rgba(21,21,21,.01);
+	margin-bottom: 5;
+	padding-top: 5;
+	padding-bottom: 5;
+	padding-left: 3;
+	padding-right: 3;
+	border-radius: 10;
 }
