@@ -1,0 +1,14 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodingCoach.CustomControls.TagsView">
+
+    <ContentView.Content>
+        <FlexLayout x:Name="TagsContainer"
+                    JustifyContent="Center"
+                    AlignItems="Center"
+                    Padding="2"
+                    Direction="Row"
+                    Wrap="Wrap" />
+    </ContentView.Content>
+
+</ContentView>

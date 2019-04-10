@@ -1,13 +1,9 @@
-﻿.page {
+﻿.page { }
 
-}
-
-.mentor-list {
-	margin-top: 5;
-}
+.mentor-list { margin-top: 5; }
 
 .mentor-card {
-	border-color: gray;
+	border-color: #9b9b9b;
 	margin-left: 20;
 	margin-right: 20;
 	margin-top: 5;
@@ -21,6 +17,7 @@
 .mentor-name {
 	color: #4a4a4a;
 	font-size: 20;
+	text-align: center;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -29,6 +26,8 @@
 
 .mentor-title {
 	color: #999;
+	font-size: 16;
+	text-align: center;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -37,11 +36,28 @@
 
 .mentor-description {
 	font-style: italic;
-	background: rgba(21,21,21,.01);
+	background: rgba(21, 21, 21, .01);
 	margin-bottom: 5;
 	padding-top: 5;
 	padding-bottom: 5;
 	padding-left: 3;
 	padding-right: 3;
 	border-radius: 10;
+	text-align: center;
+}
+
+.mentor-tag-container {
+	margin: 4;
+	padding: 0;
+	background-color: #69D5B1;
+	border-radius: 5;
+}
+
+.mentor-tag {
+	margin: 10;
+}
+
+.separator {
+	height: 1;
+	color: #9b9b9b;
 }

@@ -1,6 +1,7 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:customControls="clr-namespace:CodingCoach.CustomControls;assembly=CodingCoach"
              x:Class="CodingCoach.Views.ItemsPage"
              Title="{Binding Title}"
              class="page"
@@ -27,10 +28,10 @@
                             <StackLayout
                                 Grid.Column="0"
                                 Grid.Row="0"
-                                Padding="0,35,0,10">
+                                Padding="0,55,0,10">
                                 <Frame BackgroundColor="Transparent"
                                        class="mentor-card">
-                                    <StackLayout Padding="5,30,5,10"
+                                    <StackLayout Padding="5,45,5,10"
                                         Orientation="Vertical">
                                         <Label Text="{Binding Name}"
                                                class="mentor-name"
@@ -40,6 +41,15 @@
                                                class="mentor-title" />
                                         <Label Text="{Binding Description}" StyleClass="mentor-description"
                                                HorizontalOptions="Center" />
+                                        <!--// TODO: separator-->
+                                        <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}"/>
+                                        <BoxView class="separator"/>
+                                        <FlexLayout Direction="Row">
+                                        <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.ChevronLeft}"/>
+                                        <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.Twitter}"/>
+                                        <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.ChevronRight}"/>
+                                        </FlexLayout>
+
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
@@ -49,8 +59,8 @@
                                 Grid.Row="0"
                                 Source="{Binding Avatar}" BorderColor="Gray"
                                 BorderThickness="1"
-                                HeightRequest="90"
-                                WidthRequest="90"
+                                HeightRequest="120"
+                                WidthRequest="120"
                                 Aspect="AspectFill"
                                 HorizontalOptions="Center" />
                         </Grid>

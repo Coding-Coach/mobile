@@ -25,6 +25,17 @@ namespace CodingCoach.iOS
       {
          global::Xamarin.Forms.Forms.Init();
          ImageCircleRenderer.Init();
+
+         // TODO: add the right name for ios font awesome brands
+         foreach (var familyNames in UIFont.FamilyNames.Where(f => f.StartsWith("Font Awesome")).OrderBy(c => c).ToList())
+         {
+            Console.WriteLine(" * " + familyNames);
+            foreach (var familyName in UIFont.FontNamesForFamilyName(familyNames).OrderBy(c => c).ToList())
+            {
+               Console.WriteLine(" *-- " + familyName);
+            }
+         }
+
          LoadApplication( new App() );
          return base.FinishedLaunching( app, options );
       }
