@@ -12,11 +12,16 @@
       public static readonly string ChartBar     = "\uf080";
       public static readonly string Save         = "\uf0c7";
       public static readonly string Cancel       = "\uf05e";
+      public static readonly string Email        = "\uf1fa";
+      public static readonly string Globe        = "\uf0ac";
    }
 
    public static class BrandIcon
    {
-      public static readonly string Twitter      = "\uf099";
+      public static readonly string Twitter  = "\uf099";
+      public static readonly string Slack    = "\uf198";
+      public static readonly string Linkedin = "\uf08c";
+      public static readonly string Facebook = "\uf09a";
+      public static readonly string Github   = "\uf09b";
    }
-
 }

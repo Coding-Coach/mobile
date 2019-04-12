@@ -61,3 +61,13 @@
 	height: 1;
 	color: #9b9b9b;
 }
+
+.channel {
+	font-size: 24;
+	color: #999;
+}
+
+.channel-text {
+	font-size: 16;
+	color: #999;
+}
