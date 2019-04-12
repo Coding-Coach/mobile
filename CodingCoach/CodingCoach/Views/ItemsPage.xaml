@@ -32,7 +32,7 @@
                                 <Frame BackgroundColor="Transparent"
                                        class="mentor-card">
                                     <StackLayout Padding="5,45,5,10"
-                                        Orientation="Vertical">
+                                                 Orientation="Vertical">
                                         <Label Text="{Binding Name}"
                                                class="mentor-name"
                                                HorizontalOptions="Center" />
@@ -42,13 +42,18 @@
                                         <Label Text="{Binding Description}" StyleClass="mentor-description"
                                                HorizontalOptions="Center" />
                                         <!--// TODO: separator-->
-                                        <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}"/>
-                                        <BoxView class="separator"/>
-                                        <FlexLayout Direction="Row">
-                                        <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.ChevronLeft}"/>
-                                        <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.Twitter}"/>
-                                        <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.ChevronRight}"/>
-                                        </FlexLayout>
+                                        <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}" />
+                                        <BoxView class="separator" />
+                                        <StackLayout>
+                                            <customControls:ChannelView ChannelType="Email" Id="123456" />
+                                        </StackLayout>
+                                        <!--<customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.Email}" class="channel" />
+                                            <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.Globe}" class="channel" />
+                                            <customControls:FontAwesomeBrandIcon Text="{x:Static customControls:BrandIcon.Twitter}" class="channel" />
+                                            <customControls:FontAwesomeBrandIcon Text="{x:Static customControls:BrandIcon.Facebook}" class="channel" />
+                                            <customControls:FontAwesomeBrandIcon Text="{x:Static customControls:BrandIcon.Github}" class="channel" />
+                                            <customControls:FontAwesomeBrandIcon Text="{x:Static customControls:BrandIcon.Linkedin}" class="channel" />
+                                            <customControls:FontAwesomeBrandIcon Text="{x:Static customControls:BrandIcon.Slack}" class="channel" />-->
 
                                     </StackLayout>
                                 </Frame>

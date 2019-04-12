@@ -1,0 +1,15 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:CodingCoach.CustomControls;assembly=CodingCoach"
+             x:Class="CodingCoach.CustomControls.ChannelView">
+
+    <ContentView.Content>
+        <StackLayout 
+            Orientation="Vertical">
+            <customControls:FontAwesomeIcon x:Name="ChannelIcon" class="channel" HorizontalOptions="CenterAndExpand" />
+            <customControls:FontAwesomeBrandIcon x:Name="ChannelBrandIcon" class="channel" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="ChannelText" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentView.Content>
+
+</ContentView>
