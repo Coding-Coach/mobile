@@ -45,9 +45,25 @@
                                         <!--// TODO: separator-->
                                         <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}" />
                                         <BoxView class="separator" />
-                                        <StackLayout>
-                                            <customControls:ChannelView ChannelType="Email" Id="123456" />
-                                        </StackLayout>
+
+                                        <FlexLayout Direction="Row">
+
+                                            <StackLayout>
+                                                <customControls:ChannelView ChannelType="Email" Id="123456" />
+                                            </StackLayout>
+ 
+                                            <StackLayout>
+                                                <customControls:ChannelView ChannelType="Twitter" Id="123456" />
+                                            </StackLayout>      
+                                            
+                                            <StackLayout>
+                                                <customControls:ChannelView ChannelType="Website" Id="123456" />
+                                            </StackLayout>
+
+
+                                        </FlexLayout>
+
+                                                                                
                                         <!--<customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.Email}" class="channel" />
                                             <customControls:FontAwesomeIcon Text="{x:Static customControls:Icon.Globe}" class="channel" />
                                             <customControls:FontAwesomeBrandIcon Text="{x:Static customControls:BrandIcon.Twitter}" class="channel" />
