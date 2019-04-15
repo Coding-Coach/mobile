@@ -36,6 +36,7 @@ namespace CodingCoach.CustomControls
          };
          var frame = new Frame
          {
+             HasShadow = false,
             @class = new List<string>
             {
                "mentor-tag-container"
