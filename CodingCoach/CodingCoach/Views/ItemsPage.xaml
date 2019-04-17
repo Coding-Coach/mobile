@@ -42,10 +42,10 @@
                                                class="mentor-title" />
                                         <Label Text="{Binding Description}" StyleClass="mentor-description"
                                                HorizontalOptions="Center" />
-                                        <!--// TODO: separator-->
                                         <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}" />
                                         <BoxView class="separator" />
-                                        <customControls:ChannelsView Channels="{Binding Channels}" />
+                                        <customControls:ChannelsView Channels="{Binding Channels, Mode=TwoWay}" />
+                                        <BoxView class="separator" />
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>

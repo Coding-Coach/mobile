@@ -2,12 +2,12 @@
 {
     public enum ChannelType
     {
-       Twitter,
-       Github,
-       Linkedin,
-       Facebook,
-       Slack,
-       Website,
-       Email
+       twitter,
+       github,
+       linkedin,
+       facebook,
+       slack,
+       website,
+       email
     }
 }

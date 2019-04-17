@@ -13,17 +13,25 @@ namespace CodingCoach.CustomControls
    {
       public ChannelsView()
       {
-         InitializeComponent();
+         try
+         {
+            InitializeComponent();
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine( e );
+         }
       }
 
       public static readonly BindableProperty ChannelsProperty = BindableProperty.Create(
          "Channels",
-         typeof(ObservableCollection<string>),
+         typeof(ObservableCollection<Channel>),
          typeof(ChannelsView),
-         new ObservableCollection<string>(),
+         new ObservableCollection<Channel>(),
          BindingMode.Default,
          null,
          ChannelsPropertyChanged );
+
       public ObservableCollection<Channel> Channels { get; set; }
 
       private static View CreateChannel( Channel channel )
@@ -32,15 +40,8 @@ namespace CodingCoach.CustomControls
          {
             ChannelType = (ChannelType) Enum.Parse( typeof(ChannelType), channel.Type )
          };
-         var frame = new Frame
-         {
-            @class = new List<string>
-            {
-               "mentor-channel-container"
-            },
-            Content = channelView
-         };
-         return frame;
+
+         return channelView;
       }
 
       private static void ChannelsPropertyChanged( BindableObject bindable,
