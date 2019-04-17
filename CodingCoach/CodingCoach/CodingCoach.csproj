@@ -39,6 +39,9 @@
     <Compile Update="CustomControls\ChannelView.xaml.cs">
       <DependentUpon>ChannelView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="CustomControls\ChannelsView.xaml.cs">
+      <DependentUpon>ChannelsView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
