@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace CodingCoach.CustomControls
@@ -59,6 +56,54 @@ namespace CodingCoach.CustomControls
                         control.ChannelBrandIcon.Text = "";
                         control.ChannelBrandIcon.IsVisible = false;
                         control.ChannelText.Text = "Email";
+                        break;
+
+                    case ChannelType.Website:
+                        control.ChannelIcon.Text = Icon.Globe;
+                        control.ChannelIcon.IsVisible = true;
+                        control.ChannelBrandIcon.Text = "";
+                        control.ChannelBrandIcon.IsVisible = false;
+                        control.ChannelText.Text = "Website";
+                        break;
+
+                    case ChannelType.Facebook:
+                        control.ChannelIcon.Text = "";
+                        control.ChannelIcon.IsVisible = false;
+                        control.ChannelBrandIcon.Text = BrandIcon.Facebook;
+                        control.ChannelBrandIcon.IsVisible = true;
+                        control.ChannelText.Text = "Facebook";
+                        break;
+
+                    case ChannelType.Github:
+                        control.ChannelIcon.Text = "";
+                        control.ChannelIcon.IsVisible = false;
+                        control.ChannelBrandIcon.Text = BrandIcon.Github;
+                        control.ChannelBrandIcon.IsVisible = true;
+                        control.ChannelText.Text = "Github";
+                        break;
+
+                    case ChannelType.Linkedin:
+                        control.ChannelIcon.Text = "";
+                        control.ChannelIcon.IsVisible = false;
+                        control.ChannelBrandIcon.Text = BrandIcon.Linkedin;
+                        control.ChannelBrandIcon.IsVisible = true;
+                        control.ChannelText.Text = "Linkedin";
+                        break;
+
+                    case ChannelType.Twitter:
+                        control.ChannelIcon.Text = "";
+                        control.ChannelIcon.IsVisible = false;
+                        control.ChannelBrandIcon.Text = BrandIcon.Twitter;
+                        control.ChannelBrandIcon.IsVisible = true;
+                        control.ChannelText.Text = "Twitter";
+                        break;
+
+                    case ChannelType.Slack:
+                        control.ChannelIcon.Text = "";
+                        control.ChannelIcon.IsVisible = false;
+                        control.ChannelBrandIcon.Text = BrandIcon.Slack;
+                        control.ChannelBrandIcon.IsVisible = true;
+                        control.ChannelText.Text = "Slack";
                         break;
                 }
 
