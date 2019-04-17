@@ -4,7 +4,7 @@
 
     <ContentView.Content>
         <FlexLayout x:Name="ChannelsContainer"
-                    JustifyContent="Center"
+                    JustifyContent="SpaceBetween"
                     AlignItems="Center"
                     Padding="2"
                     Direction="Row"

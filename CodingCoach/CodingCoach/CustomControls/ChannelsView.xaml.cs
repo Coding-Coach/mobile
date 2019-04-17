@@ -36,11 +36,7 @@ namespace CodingCoach.CustomControls
 
       private static View CreateChannel( Channel channel )
       {
-         var channelView = new ChannelView
-         {
-            ChannelType = (ChannelType) Enum.Parse( typeof(ChannelType), channel.Type )
-         };
-
+         var channelView = new ChannelView((ChannelType) Enum.Parse( typeof(ChannelType), channel.Type ));
          return channelView;
       }
 

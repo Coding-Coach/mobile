@@ -8,12 +8,18 @@ namespace CodingCoach.CustomControls
     {
         public ChannelView()
         {
-            InitializeComponent();
         }
 
-        #region Id
+      public ChannelView(ChannelType channelType)
+      {
+         InitializeComponent();
+         ChannelType = channelType;
+         SetProperties( channelType,this );
+      }
 
-        public static readonly BindableProperty IdProperty = BindableProperty.Create(
+      #region Id
+
+      public static readonly BindableProperty IdProperty = BindableProperty.Create(
             "Id",
             typeof(string),
             typeof(ChannelView),
@@ -44,73 +50,75 @@ namespace CodingCoach.CustomControls
         {
             if (bindable is ChannelView control)
             {
-                control.ChannelIcon.Text = "";
-                control.ChannelBrandIcon.Text = "";
-                control.ChannelText.Text = "";
-
-                switch ((ChannelType) newValue)
-                {
-                    case ChannelType.Email:
-                        control.ChannelIcon.Text = Icon.Email;
-                        control.ChannelIcon.IsVisible = true;
-                        control.ChannelBrandIcon.Text = "";
-                        control.ChannelBrandIcon.IsVisible = false;
-                        control.ChannelText.Text = "Email";
-                        break;
-
-                    case ChannelType.Website:
-                        control.ChannelIcon.Text = Icon.Globe;
-                        control.ChannelIcon.IsVisible = true;
-                        control.ChannelBrandIcon.Text = "";
-                        control.ChannelBrandIcon.IsVisible = false;
-                        control.ChannelText.Text = "Website";
-                        break;
-
-                    case ChannelType.Facebook:
-                        control.ChannelIcon.Text = "";
-                        control.ChannelIcon.IsVisible = false;
-                        control.ChannelBrandIcon.Text = BrandIcon.Facebook;
-                        control.ChannelBrandIcon.IsVisible = true;
-                        control.ChannelText.Text = "Facebook";
-                        break;
-
-                    case ChannelType.Github:
-                        control.ChannelIcon.Text = "";
-                        control.ChannelIcon.IsVisible = false;
-                        control.ChannelBrandIcon.Text = BrandIcon.Github;
-                        control.ChannelBrandIcon.IsVisible = true;
-                        control.ChannelText.Text = "Github";
-                        break;
-
-                    case ChannelType.Linkedin:
-                        control.ChannelIcon.Text = "";
-                        control.ChannelIcon.IsVisible = false;
-                        control.ChannelBrandIcon.Text = BrandIcon.Linkedin;
-                        control.ChannelBrandIcon.IsVisible = true;
-                        control.ChannelText.Text = "Linkedin";
-                        break;
-
-                    case ChannelType.Twitter:
-                        control.ChannelIcon.Text = "";
-                        control.ChannelIcon.IsVisible = false;
-                        control.ChannelBrandIcon.Text = BrandIcon.Twitter;
-                        control.ChannelBrandIcon.IsVisible = true;
-                        control.ChannelText.Text = "Twitter";
-                        break;
-
-                    case ChannelType.Slack:
-                        control.ChannelIcon.Text = "";
-                        control.ChannelIcon.IsVisible = false;
-                        control.ChannelBrandIcon.Text = BrandIcon.Slack;
-                        control.ChannelBrandIcon.IsVisible = true;
-                        control.ChannelText.Text = "Slack";
-                        break;
-                }
-
-                // set image for channel
-                // set text for channel
+               SetProperties((ChannelType)newValue, control);
             }
         }
+
+        private static void SetProperties( ChannelType newValue, ChannelView control )
+        {
+         control.ChannelIcon.Text = "";
+         control.ChannelBrandIcon.Text = "";
+         control.ChannelText.Text = "";
+
+         switch ((ChannelType)newValue)
+         {
+            case ChannelType.email:
+               control.ChannelIcon.Text = Icon.Email;
+               control.ChannelIcon.IsVisible = true;
+               control.ChannelBrandIcon.Text = "";
+               control.ChannelBrandIcon.IsVisible = false;
+               control.ChannelText.Text = "Email";
+               break;
+
+            case ChannelType.website:
+               control.ChannelIcon.Text = Icon.Globe;
+               control.ChannelIcon.IsVisible = true;
+               control.ChannelBrandIcon.Text = "";
+               control.ChannelBrandIcon.IsVisible = false;
+               control.ChannelText.Text = "Website";
+               break;
+
+            case ChannelType.facebook:
+               control.ChannelIcon.Text = "";
+               control.ChannelIcon.IsVisible = false;
+               control.ChannelBrandIcon.Text = BrandIcon.Facebook;
+               control.ChannelBrandIcon.IsVisible = true;
+               control.ChannelText.Text = "Facebook";
+               break;
+
+            case ChannelType.github:
+               control.ChannelIcon.Text = "";
+               control.ChannelIcon.IsVisible = false;
+               control.ChannelBrandIcon.Text = BrandIcon.Github;
+               control.ChannelBrandIcon.IsVisible = true;
+               control.ChannelText.Text = "Github";
+               break;
+
+            case ChannelType.linkedin:
+               control.ChannelIcon.Text = "";
+               control.ChannelIcon.IsVisible = false;
+               control.ChannelBrandIcon.Text = BrandIcon.Linkedin;
+               control.ChannelBrandIcon.IsVisible = true;
+               control.ChannelText.Text = "Linkedin";
+               break;
+
+            case ChannelType.twitter:
+               control.ChannelIcon.Text = "";
+               control.ChannelIcon.IsVisible = false;
+               control.ChannelBrandIcon.Text = BrandIcon.Twitter;
+               control.ChannelBrandIcon.IsVisible = true;
+               control.ChannelText.Text = "Twitter";
+               break;
+
+            case ChannelType.slack:
+               control.ChannelIcon.Text = "";
+               control.ChannelIcon.IsVisible = false;
+               control.ChannelBrandIcon.Text = BrandIcon.Slack;
+               control.ChannelBrandIcon.IsVisible = true;
+               control.ChannelText.Text = "Slack";
+               break;
+         }
+      }
 
         #endregion
     }

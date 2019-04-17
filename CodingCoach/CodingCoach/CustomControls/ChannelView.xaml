@@ -4,7 +4,7 @@
              x:Class="CodingCoach.CustomControls.ChannelView">
 
     <ContentView.Content>
-        <StackLayout 
+        <StackLayout
             Orientation="Vertical">
             <customControls:FontAwesomeIcon x:Name="ChannelIcon" class="channel" HorizontalOptions="CenterAndExpand" />
             <customControls:FontAwesomeBrandIcon x:Name="ChannelBrandIcon" class="channel" HorizontalOptions="CenterAndExpand" />
