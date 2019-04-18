@@ -31,12 +31,11 @@ namespace CodingCoach.CustomControls
          BindingMode.Default,
          null,
          ChannelsPropertyChanged );
-
       public ObservableCollection<Channel> Channels { get; set; }
 
       private static View CreateChannel( Channel channel )
       {
-         var channelView = new ChannelView((ChannelType) Enum.Parse( typeof(ChannelType), channel.Type ));
+         var channelView = new ChannelView( (ChannelType) Enum.Parse( typeof(ChannelType), channel.Type ), channel.Id );
          return channelView;
       }
 

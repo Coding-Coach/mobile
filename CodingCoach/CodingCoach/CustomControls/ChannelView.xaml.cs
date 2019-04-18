@@ -1,125 +1,138 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace CodingCoach.CustomControls
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChannelView
-    {
-        public ChannelView()
-        {
-        }
-
-      public ChannelView(ChannelType channelType)
+   [XamlCompilation( XamlCompilationOptions.Compile )]
+   public partial class ChannelView
+   {
+      public ChannelView( ChannelType channelType,
+                          string      id )
       {
          InitializeComponent();
          ChannelType = channelType;
-         SetProperties( channelType,this );
+         SetProperties( channelType, this );
+         Id = id;
       }
 
       #region Id
 
       public static readonly BindableProperty IdProperty = BindableProperty.Create(
-            "Id",
-            typeof(string),
-            typeof(ChannelView),
-            "",
-            BindingMode.Default);
+         "Id",
+         typeof(string),
+         typeof(ChannelView),
+         "",
+         BindingMode.Default );
+      public string Id { get; set; }
 
-        public string Id { get; set; }
+      #endregion
 
-        #endregion
+      #region ChannelType
 
-        #region ChannelType
+      public static readonly BindableProperty ChannelTypeProperty = BindableProperty.Create(
+         "ChannelType",
+         typeof(ChannelType),
+         typeof(ChannelView),
+         null,
+         BindingMode.Default,
+         null,
+         ChannelTypePropertyChanged );
+      public ChannelType ChannelType { get; set; }
+      public string      ChannelLink { get; set; }
 
-        public static readonly BindableProperty ChannelTypeProperty = BindableProperty.Create(
-            "ChannelType",
-            typeof(ChannelType),
-            typeof(ChannelView),
-            null,
-            BindingMode.Default,
-            null,
-            ChannelTypePropertyChanged);
+      private static void ChannelTypePropertyChanged( BindableObject bindable,
+                                                      object         oldValue,
+                                                      object         newValue )
+      {
+         if ( bindable is ChannelView control )
+         {
+            SetProperties( (ChannelType) newValue, control );
+         }
+      }
 
-        public ChannelType ChannelType { get; set; }
-
-
-        private static void ChannelTypePropertyChanged(BindableObject bindable,
-            object oldValue,
-            object newValue)
-        {
-            if (bindable is ChannelView control)
-            {
-               SetProperties((ChannelType)newValue, control);
-            }
-        }
-
-        private static void SetProperties( ChannelType newValue, ChannelView control )
-        {
-         control.ChannelIcon.Text = "";
+      private static void SetProperties( ChannelType newValue,
+                                         ChannelView control )
+      {
+         control.ChannelIcon.Text      = "";
          control.ChannelBrandIcon.Text = "";
-         control.ChannelText.Text = "";
-
-         switch ((ChannelType)newValue)
+         control.ChannelText.Text      = "";
+         control.ChannelLink           = "";
+         switch ( (ChannelType) newValue )
          {
             case ChannelType.email:
-               control.ChannelIcon.Text = Icon.Email;
-               control.ChannelIcon.IsVisible = true;
-               control.ChannelBrandIcon.Text = "";
+               control.ChannelIcon.Text           = Icon.Email;
+               control.ChannelIcon.IsVisible      = true;
+               control.ChannelBrandIcon.Text      = "";
                control.ChannelBrandIcon.IsVisible = false;
-               control.ChannelText.Text = "Email";
+               control.ChannelText.Text           = "Email";
+               control.ChannelLink = ""; // TODO
                break;
-
             case ChannelType.website:
-               control.ChannelIcon.Text = Icon.Globe;
-               control.ChannelIcon.IsVisible = true;
-               control.ChannelBrandIcon.Text = "";
+               control.ChannelIcon.Text           = Icon.Globe;
+               control.ChannelIcon.IsVisible      = true;
+               control.ChannelBrandIcon.Text      = "";
                control.ChannelBrandIcon.IsVisible = false;
-               control.ChannelText.Text = "Website";
+               control.ChannelText.Text           = "Website";
+               control.ChannelLink = ""; // TODO
                break;
-
             case ChannelType.facebook:
-               control.ChannelIcon.Text = "";
-               control.ChannelIcon.IsVisible = false;
-               control.ChannelBrandIcon.Text = BrandIcon.Facebook;
+               control.ChannelIcon.Text           = "";
+               control.ChannelIcon.IsVisible      = false;
+               control.ChannelBrandIcon.Text      = BrandIcon.Facebook;
                control.ChannelBrandIcon.IsVisible = true;
-               control.ChannelText.Text = "Facebook";
+               control.ChannelText.Text           = "Facebook";
+               control.ChannelLink = ""; // TODO
                break;
-
             case ChannelType.github:
-               control.ChannelIcon.Text = "";
-               control.ChannelIcon.IsVisible = false;
-               control.ChannelBrandIcon.Text = BrandIcon.Github;
+               control.ChannelIcon.Text           = "";
+               control.ChannelIcon.IsVisible      = false;
+               control.ChannelBrandIcon.Text      = BrandIcon.Github;
                control.ChannelBrandIcon.IsVisible = true;
-               control.ChannelText.Text = "Github";
+               control.ChannelText.Text           = "Github";
+               control.ChannelLink = ""; // TODO
                break;
-
             case ChannelType.linkedin:
-               control.ChannelIcon.Text = "";
-               control.ChannelIcon.IsVisible = false;
-               control.ChannelBrandIcon.Text = BrandIcon.Linkedin;
+               control.ChannelIcon.Text           = "";
+               control.ChannelIcon.IsVisible      = false;
+               control.ChannelBrandIcon.Text      = BrandIcon.Linkedin;
                control.ChannelBrandIcon.IsVisible = true;
-               control.ChannelText.Text = "Linkedin";
+               control.ChannelText.Text           = "Linkedin";
+               control.ChannelLink = ""; // TODO
                break;
-
             case ChannelType.twitter:
-               control.ChannelIcon.Text = "";
-               control.ChannelIcon.IsVisible = false;
-               control.ChannelBrandIcon.Text = BrandIcon.Twitter;
+               control.ChannelIcon.Text           = "";
+               control.ChannelIcon.IsVisible      = false;
+               control.ChannelBrandIcon.Text      = BrandIcon.Twitter;
                control.ChannelBrandIcon.IsVisible = true;
-               control.ChannelText.Text = "Twitter";
+               control.ChannelText.Text           = "Twitter";
+               control.ChannelLink                = "twitter://user?user_id={0}";
                break;
-
             case ChannelType.slack:
-               control.ChannelIcon.Text = "";
-               control.ChannelIcon.IsVisible = false;
-               control.ChannelBrandIcon.Text = BrandIcon.Slack;
+               control.ChannelIcon.Text           = "";
+               control.ChannelIcon.IsVisible      = false;
+               control.ChannelBrandIcon.Text      = BrandIcon.Slack;
                control.ChannelBrandIcon.IsVisible = true;
-               control.ChannelText.Text = "Slack";
+               control.ChannelText.Text           = "Slack";
+               control.ChannelLink = ""; // TODO
                break;
          }
       }
 
-        #endregion
-    }
+      #endregion
+
+      public ICommand ChannelTappedCommand { get; set; } = new Command<ChannelView>( ( control ) =>
+      {
+         try
+         {
+            var uriString = string.Format( control.ChannelLink, control.Id );
+            Device.OpenUri( new Uri( uriString ) );
+         }
+         catch
+         {
+            Acr.UserDialogs.UserDialogs.Instance.Toast( $"Your device can't handle {control.ChannelText.Text} links" );
+         }
+      } );
+   }
 }
