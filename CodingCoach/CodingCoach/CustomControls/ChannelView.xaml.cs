@@ -67,7 +67,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = "";
                control.ChannelBrandIcon.IsVisible = false;
                control.ChannelText.Text           = "Email";
-               control.ChannelLink = ""; // TODO
+               control.ChannelLink = "mailto:{0}";
                break;
             case ChannelType.website:
                control.ChannelIcon.Text           = Icon.Globe;
@@ -75,7 +75,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = "";
                control.ChannelBrandIcon.IsVisible = false;
                control.ChannelText.Text           = "Website";
-               control.ChannelLink = ""; // TODO
+               control.ChannelLink = "https://{0}";
                break;
             case ChannelType.facebook:
                control.ChannelIcon.Text           = "";
@@ -83,7 +83,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = BrandIcon.Facebook;
                control.ChannelBrandIcon.IsVisible = true;
                control.ChannelText.Text           = "Facebook";
-               control.ChannelLink = ""; // TODO
+               control.ChannelLink = "https://www.facebook.com/{0}";
                break;
             case ChannelType.github:
                control.ChannelIcon.Text           = "";
@@ -91,7 +91,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = BrandIcon.Github;
                control.ChannelBrandIcon.IsVisible = true;
                control.ChannelText.Text           = "Github";
-               control.ChannelLink = ""; // TODO
+               control.ChannelLink = "https://github.com/{0}";
                break;
             case ChannelType.linkedin:
                control.ChannelIcon.Text           = "";
@@ -99,7 +99,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = BrandIcon.Linkedin;
                control.ChannelBrandIcon.IsVisible = true;
                control.ChannelText.Text           = "Linkedin";
-               control.ChannelLink = ""; // TODO
+               control.ChannelLink = "https://www.linkedin.com/in/{0}";
                break;
             case ChannelType.twitter:
                control.ChannelIcon.Text           = "";
@@ -107,7 +107,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = BrandIcon.Twitter;
                control.ChannelBrandIcon.IsVisible = true;
                control.ChannelText.Text           = "Twitter";
-               control.ChannelLink                = "twitter://user?user_id={0}";
+               control.ChannelLink                = "https://twitter.com/{0}";
                break;
             case ChannelType.slack:
                control.ChannelIcon.Text           = "";
@@ -115,7 +115,7 @@ namespace CodingCoach.CustomControls
                control.ChannelBrandIcon.Text      = BrandIcon.Slack;
                control.ChannelBrandIcon.IsVisible = true;
                control.ChannelText.Text           = "Slack";
-               control.ChannelLink = ""; // TODO
+               control.ChannelLink = "https://coding-coach.slack.com/team/{0}";
                break;
          }
       }
