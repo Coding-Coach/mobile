@@ -14,6 +14,7 @@
       public static readonly string Cancel       = "\uf05e";
       public static readonly string Email        = "\uf1fa";
       public static readonly string Globe        = "\uf0ac";
+      public static readonly string Heart        = "\uf004";
    }
 
    public static class BrandIcon

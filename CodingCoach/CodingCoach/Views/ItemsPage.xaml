@@ -32,19 +32,38 @@
                                 <Frame BackgroundColor="Transparent"
                                        HasShadow="false"
                                        class="mentor-card">
-                                    <StackLayout Padding="5,45,5,10"
-                                                 Orientation="Vertical">
-                                        <Label Text="{Binding Name}"
-                                               class="mentor-name"
-                                               HorizontalOptions="Center" />
-                                        <Label Text="{Binding Title}"
-                                               HorizontalOptions="Center"
-                                               class="mentor-title" />
-                                        <Label Text="{Binding Description}" StyleClass="mentor-description"
-                                               HorizontalOptions="Center" />
-                                        <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}" />
-                                        <BoxView class="separator" />
-                                        <customControls:ChannelsView Channels="{Binding Channels, Mode=TwoWay}" />
+                                    <StackLayout>
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            HorizontalOptions="FillAndExpand">
+                                            <Image
+                                                HorizontalOptions="Start"
+                                                Source="{Binding CountryImageSource}"
+                                                HeightRequest="32"
+                                                WidthRequest="32"
+                                                Aspect="AspectFill" />
+                                            <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
+                                                <customControls:FontAwesomeIcon
+                                                    TextColor="{Binding FavoriteColor}"
+                                                    FontSize="24"
+                                                    HorizontalOptions="End"
+                                                    Text="{x:Static customControls:Icon.Heart}" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout Padding="5,15,5,10"
+                                                     Orientation="Vertical">
+                                            <Label Text="{Binding Name}"
+                                                   class="mentor-name"
+                                                   HorizontalOptions="Center" />
+                                            <Label Text="{Binding Title}"
+                                                   HorizontalOptions="Center"
+                                                   class="mentor-title" />
+                                            <Label Text="{Binding Description}" StyleClass="mentor-description"
+                                                   HorizontalOptions="Center" />
+                                            <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}" />
+                                            <BoxView class="separator" />
+                                            <customControls:ChannelsView Channels="{Binding Channels, Mode=TwoWay}" />
+                                        </StackLayout>
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
