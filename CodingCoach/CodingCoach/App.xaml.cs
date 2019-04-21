@@ -2,26 +2,29 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CodingCoach.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation( XamlCompilationOptions.Compile )]
+
 namespace CodingCoach
 {
    public partial class App
    {
-
       public App()
       {
          InitializeComponent();
-
          DependencyService.Register<ApiAccessService>();
          DependencyService.Register<LoadService>();
-
          MainPage = new MainPage();
       }
 
       protected override void OnStart()
       {
-         // Handle when your app starts
+         AppCenter.Start( $"android={Secrets.Instance.AppCenterAndroid};" +
+                          $"ios={Secrets.Instance.AppCenteriOS};",
+                          typeof(Analytics), typeof(Crashes) );
       }
 
       protected override void OnSleep()
