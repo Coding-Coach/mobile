@@ -22,11 +22,11 @@
   <ItemGroup>
     <None Remove="mentors.json" />
     <None Remove="secrets.json" />
+    <None Remove="secrets.json.template" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="mentors.json" />
-    <EmbeddedResource Include="secrets.json" />
   </ItemGroup>
 
   <ItemGroup>
