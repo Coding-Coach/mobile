@@ -8,27 +8,37 @@
     <ContentPage.BindingContext>
         <vm:ContactViewModel />
     </ContentPage.BindingContext>
-    
+    <ContentPage.Resources>
+        <StyleSheet Source="../Assets/contactPage.css"/>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Margin="20">
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="We want to hear your thoughts! Feel free to join our " />
-                        <Span Text="Slack Organization" TextDecorations="Underline">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding SlackCommand}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                        <Span Text=" or send us an email at " />
-                        <Span Text="codingcoachio@gmail.com" TextColor="#69d5b1">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding EmailCommand}" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+        <StackLayout>
+            <FlexLayout>
+                <Label Text="We want to hear your thoughts! Feel free to join our " />
+                <Label StyleClass="linkLabel">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Slack Organization">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SlackCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text=" or send us an email at " />
+                <Label StyleClass="emailLabel">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="codingcoachio@gmail.com">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding EmailCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </FlexLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

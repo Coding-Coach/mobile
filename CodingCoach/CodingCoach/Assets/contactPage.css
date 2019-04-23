@@ -1,0 +1,13 @@
+﻿.linkLabel {
+    text-decoration: underline;
+}
+
+.emailLabel {
+    color: #69d5b1;
+}
+
+flexLayout {
+    margin: 20;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
