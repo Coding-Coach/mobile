@@ -43,11 +43,11 @@
                                                 WidthRequest="32"
                                                 Aspect="AspectFill" />
                                             <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
-                                                <customControls:FontAwesomeIcon
-                                                    TextColor="{Binding FavoriteColor}"
-                                                    FontSize="24"
-                                                    HorizontalOptions="End"
-                                                    Text="{x:Static customControls:Icon.Heart}" />
+                                                <Label FontFamily="{StaticResource FontAwesomeIcon}"
+                                                       TextColor="{Binding FavoriteColor}"
+                                                       FontSize="24"
+                                                       HorizontalOptions="End"
+                                                       Text="{x:Static customControls:Icon.Heart}" />
                                             </StackLayout>
                                         </StackLayout>
                                         <StackLayout Padding="5,15,5,10"
