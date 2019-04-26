@@ -20,7 +20,7 @@ namespace CodingCoach.Services
             var loadService = DependencyService.Resolve<ILoadService>();
             var secretsString = loadService.GetTextFromEmbeddedResource("secrets.json");
             var secrets       = JsonConvert.DeserializeObject<SecretsData>(secretsString);
-            return secrets;
+            return secrets ?? new SecretsData();
          }
          catch
          {
