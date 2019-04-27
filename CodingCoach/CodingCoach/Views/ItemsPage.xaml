@@ -16,6 +16,9 @@
     </ContentPage.ToolbarItems>-->
 
     <StackLayout>
+        <customControls:AutoCompleteView
+            OnSelectionCommand="{Binding TechListSelectedCommand}"
+            ItemsSource="{Binding TechList}"/>
         <ListView
             class="mentor-list"
             HasUnevenRows="true"

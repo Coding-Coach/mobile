@@ -5,6 +5,7 @@ namespace CodingCoach.Services
 {
    public interface IApiAccessService
    {
-      IEnumerable<Mentor> GetMentors();
+      IList<Mentor> GetMentors(string techFilter);
+      IList<string> GetTechList();
    }
 }

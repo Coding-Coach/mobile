@@ -41,7 +41,7 @@ namespace CodingCoach.Views
       {
          base.OnAppearing();
 
-         if (viewModel.Items.Count == 0)
+         if (viewModel.Mentors.Count == 0)
             viewModel.LoadItemsCommand.Execute(null);
       }
    }
