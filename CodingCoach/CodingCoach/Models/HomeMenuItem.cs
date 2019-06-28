@@ -4,7 +4,8 @@
     {
         Browse,
         About,
-        Contact
+        Contact,
+        Logout
     }
 
     public class HomeMenuItem

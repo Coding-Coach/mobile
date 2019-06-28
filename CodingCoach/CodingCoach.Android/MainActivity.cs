@@ -1,14 +1,23 @@
 using Acr.UserDialogs;
 using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Auth0.OidcClient;
 using ImageCircle.Forms.Plugin.Droid;
 
 namespace CodingCoach.Droid
 {
    [Activity( Label        = "CodingCoach", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
-      ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation )]
+      ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+      LaunchMode = LaunchMode.SingleInstance)]
+   [IntentFilter(
+      new[] { Intent.ActionView },
+      Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
+      DataScheme = "smartg.android",
+      DataHost = "ia-mobile.auth0.com",
+      DataPathPrefix = "/android/smartg.android/callback")]
    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
    {
       protected override void OnCreate( Bundle savedInstanceState )
@@ -30,5 +39,13 @@ namespace CodingCoach.Droid
          Xamarin.Essentials.Platform.OnRequestPermissionsResult( requestCode, permissions, grantResults );
          base.OnRequestPermissionsResult( requestCode, permissions, grantResults );
       }
+
+      protected override void OnNewIntent(Intent intent)
+      {
+         base.OnNewIntent(intent);
+
+         ActivityMediator.Instance.Send(intent.DataString);
+      }
+
    }
 }

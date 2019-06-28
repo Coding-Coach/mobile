@@ -9,7 +9,7 @@ namespace CodingCoach.Services
 
       public static SecretsData Instance
       {
-         get { return _instance ?? ( _instance = LoadSecrets() ); }
+         get { return _instance ?? (_instance = LoadSecrets()); }
          set { _instance = value; }
       }
 
@@ -19,7 +19,7 @@ namespace CodingCoach.Services
          {
             var loadService = DependencyService.Resolve<ILoadService>();
             var secretsString = loadService.GetTextFromEmbeddedResource("secrets.json");
-            var secrets       = JsonConvert.DeserializeObject<SecretsData>(secretsString);
+            var secrets = JsonConvert.DeserializeObject<SecretsData>(secretsString);
             return secrets ?? new SecretsData();
          }
          catch
@@ -32,6 +32,8 @@ namespace CodingCoach.Services
    public class SecretsData
    {
       public string AppCenterAndroid { get; set; }
-      public string AppCenteriOS     { get; set; }
+      public string AppCenteriOS { get; set; }
+      public string Auth0ClientId { get; set; }
+      public string Auth0Domain { get; set; }
    }
 }

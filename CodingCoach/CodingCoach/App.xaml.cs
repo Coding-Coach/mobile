@@ -1,4 +1,5 @@
-﻿using CodingCoach.Services;
+﻿using System;
+using CodingCoach.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CodingCoach.Views;
@@ -17,7 +18,26 @@ namespace CodingCoach
          InitializeComponent();
          DependencyService.Register<ApiAccessService>();
          DependencyService.Register<LoadService>();
-         MainPage = new MainPage();
+
+         // TODO: move to navigation service
+         try
+         {
+            var authService = DependencyService.Resolve<IAuthService>();
+            if (authService.IsUserAuthenticated())
+            {
+               var page = new MainPage();
+               Application.Current.MainPage = page;
+            }
+            else
+            {
+               Application.Current.MainPage = new StartView();
+            }
+         }
+         catch (Exception e)
+         {
+            Console.WriteLine(e);
+            throw;
+         }
       }
 
       protected override void OnStart()

@@ -63,6 +63,105 @@ namespace CodingCoach.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::CodingCoach.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::CodingCoach.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::CodingCoach.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::Auth0.OidcClient.Resource.Attribute.font = global::CodingCoach.Droid.Resource.Attribute.font;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderAuthority = global::CodingCoach.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderCerts = global::CodingCoach.Droid.Resource.Attribute.fontProviderCerts;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderFetchStrategy = global::CodingCoach.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderFetchTimeout = global::CodingCoach.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderPackage = global::CodingCoach.Droid.Resource.Attribute.fontProviderPackage;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderQuery = global::CodingCoach.Droid.Resource.Attribute.fontProviderQuery;
+			global::Auth0.OidcClient.Resource.Attribute.fontStyle = global::CodingCoach.Droid.Resource.Attribute.fontStyle;
+			global::Auth0.OidcClient.Resource.Attribute.fontWeight = global::CodingCoach.Droid.Resource.Attribute.fontWeight;
+			global::Auth0.OidcClient.Resource.Boolean.abc_action_bar_embed_tabs = global::CodingCoach.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Auth0.OidcClient.Resource.Color.notification_action_color_filter = global::CodingCoach.Droid.Resource.Color.notification_action_color_filter;
+			global::Auth0.OidcClient.Resource.Color.notification_icon_bg_color = global::CodingCoach.Droid.Resource.Color.notification_icon_bg_color;
+			global::Auth0.OidcClient.Resource.Color.ripple_material_light = global::CodingCoach.Droid.Resource.Color.ripple_material_light;
+			global::Auth0.OidcClient.Resource.Color.secondary_text_default_material_light = global::CodingCoach.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_inset_horizontal_material = global::CodingCoach.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_inset_vertical_material = global::CodingCoach.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_padding_horizontal_material = global::CodingCoach.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_padding_vertical_material = global::CodingCoach.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_control_corner_material = global::CodingCoach.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Auth0.OidcClient.Resource.Dimension.notification_action_icon_size = global::CodingCoach.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_action_text_size = global::CodingCoach.Droid.Resource.Dimension.notification_action_text_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_big_circle_margin = global::CodingCoach.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Auth0.OidcClient.Resource.Dimension.notification_content_margin_start = global::CodingCoach.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Auth0.OidcClient.Resource.Dimension.notification_large_icon_height = global::CodingCoach.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Auth0.OidcClient.Resource.Dimension.notification_large_icon_width = global::CodingCoach.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Auth0.OidcClient.Resource.Dimension.notification_main_column_padding_top = global::CodingCoach.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Auth0.OidcClient.Resource.Dimension.notification_media_narrow_margin = global::CodingCoach.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Auth0.OidcClient.Resource.Dimension.notification_right_icon_size = global::CodingCoach.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_right_side_padding_top = global::CodingCoach.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Auth0.OidcClient.Resource.Dimension.notification_small_icon_background_padding = global::CodingCoach.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Auth0.OidcClient.Resource.Dimension.notification_small_icon_size_as_large = global::CodingCoach.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Auth0.OidcClient.Resource.Dimension.notification_subtext_size = global::CodingCoach.Droid.Resource.Dimension.notification_subtext_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_top_pad = global::CodingCoach.Droid.Resource.Dimension.notification_top_pad;
+			global::Auth0.OidcClient.Resource.Dimension.notification_top_pad_large_text = global::CodingCoach.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Auth0.OidcClient.Resource.Drawable.notification_action_background = global::CodingCoach.Droid.Resource.Drawable.notification_action_background;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg = global::CodingCoach.Droid.Resource.Drawable.notification_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_low = global::CodingCoach.Droid.Resource.Drawable.notification_bg_low;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_low_normal = global::CodingCoach.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_low_pressed = global::CodingCoach.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_normal = global::CodingCoach.Droid.Resource.Drawable.notification_bg_normal;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_normal_pressed = global::CodingCoach.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Auth0.OidcClient.Resource.Drawable.notification_icon_background = global::CodingCoach.Droid.Resource.Drawable.notification_icon_background;
+			global::Auth0.OidcClient.Resource.Drawable.notification_template_icon_bg = global::CodingCoach.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notification_template_icon_low_bg = global::CodingCoach.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notification_tile_bg = global::CodingCoach.Droid.Resource.Drawable.notification_tile_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notify_panel_notification_icon_bg = global::CodingCoach.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Auth0.OidcClient.Resource.Id.action_container = global::CodingCoach.Droid.Resource.Id.action_container;
+			global::Auth0.OidcClient.Resource.Id.action_divider = global::CodingCoach.Droid.Resource.Id.action_divider;
+			global::Auth0.OidcClient.Resource.Id.action_image = global::CodingCoach.Droid.Resource.Id.action_image;
+			global::Auth0.OidcClient.Resource.Id.action_text = global::CodingCoach.Droid.Resource.Id.action_text;
+			global::Auth0.OidcClient.Resource.Id.actions = global::CodingCoach.Droid.Resource.Id.actions;
+			global::Auth0.OidcClient.Resource.Id.async = global::CodingCoach.Droid.Resource.Id.async;
+			global::Auth0.OidcClient.Resource.Id.blocking = global::CodingCoach.Droid.Resource.Id.blocking;
+			global::Auth0.OidcClient.Resource.Id.chronometer = global::CodingCoach.Droid.Resource.Id.chronometer;
+			global::Auth0.OidcClient.Resource.Id.forever = global::CodingCoach.Droid.Resource.Id.forever;
+			global::Auth0.OidcClient.Resource.Id.icon = global::CodingCoach.Droid.Resource.Id.icon;
+			global::Auth0.OidcClient.Resource.Id.icon_group = global::CodingCoach.Droid.Resource.Id.icon_group;
+			global::Auth0.OidcClient.Resource.Id.info = global::CodingCoach.Droid.Resource.Id.info;
+			global::Auth0.OidcClient.Resource.Id.italic = global::CodingCoach.Droid.Resource.Id.italic;
+			global::Auth0.OidcClient.Resource.Id.line1 = global::CodingCoach.Droid.Resource.Id.line1;
+			global::Auth0.OidcClient.Resource.Id.line3 = global::CodingCoach.Droid.Resource.Id.line3;
+			global::Auth0.OidcClient.Resource.Id.normal = global::CodingCoach.Droid.Resource.Id.normal;
+			global::Auth0.OidcClient.Resource.Id.notification_background = global::CodingCoach.Droid.Resource.Id.notification_background;
+			global::Auth0.OidcClient.Resource.Id.notification_main_column = global::CodingCoach.Droid.Resource.Id.notification_main_column;
+			global::Auth0.OidcClient.Resource.Id.notification_main_column_container = global::CodingCoach.Droid.Resource.Id.notification_main_column_container;
+			global::Auth0.OidcClient.Resource.Id.right_icon = global::CodingCoach.Droid.Resource.Id.right_icon;
+			global::Auth0.OidcClient.Resource.Id.right_side = global::CodingCoach.Droid.Resource.Id.right_side;
+			global::Auth0.OidcClient.Resource.Id.text = global::CodingCoach.Droid.Resource.Id.text;
+			global::Auth0.OidcClient.Resource.Id.text2 = global::CodingCoach.Droid.Resource.Id.text2;
+			global::Auth0.OidcClient.Resource.Id.time = global::CodingCoach.Droid.Resource.Id.time;
+			global::Auth0.OidcClient.Resource.Id.title = global::CodingCoach.Droid.Resource.Id.title;
+			global::Auth0.OidcClient.Resource.Integer.status_bar_notification_info_maxnum = global::CodingCoach.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Auth0.OidcClient.Resource.Layout.notification_action = global::CodingCoach.Droid.Resource.Layout.notification_action;
+			global::Auth0.OidcClient.Resource.Layout.notification_action_tombstone = global::CodingCoach.Droid.Resource.Layout.notification_action_tombstone;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_custom_big = global::CodingCoach.Droid.Resource.Layout.notification_template_custom_big;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_icon_group = global::CodingCoach.Droid.Resource.Layout.notification_template_icon_group;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_part_chronometer = global::CodingCoach.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_part_time = global::CodingCoach.Droid.Resource.Layout.notification_template_part_time;
+			global::Auth0.OidcClient.Resource.String.ApplicationName = global::CodingCoach.Droid.Resource.String.ApplicationName;
+			global::Auth0.OidcClient.Resource.String.Hello = global::CodingCoach.Droid.Resource.String.Hello;
+			global::Auth0.OidcClient.Resource.String.status_bar_notification_info_overflow = global::CodingCoach.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification = global::CodingCoach.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Info = global::CodingCoach.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::CodingCoach.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Time = global::CodingCoach.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Title = global::CodingCoach.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Auth0.OidcClient.Resource.Style.Widget_Compat_NotificationActionContainer = global::CodingCoach.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Auth0.OidcClient.Resource.Style.Widget_Compat_NotificationActionText = global::CodingCoach.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily = global::CodingCoach.Droid.Resource.Styleable.FontFamily;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderAuthority = global::CodingCoach.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderCerts = global::CodingCoach.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::CodingCoach.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::CodingCoach.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderPackage = global::CodingCoach.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderQuery = global::CodingCoach.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont = global::CodingCoach.Droid.Resource.Styleable.FontFamilyFont;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont_font = global::CodingCoach.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont_fontStyle = global::CodingCoach.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont_fontWeight = global::CodingCoach.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::CodingCoach.Droid.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::CodingCoach.Droid.Resource.Attribute.fontProviderAuthority;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderCerts = global::CodingCoach.Droid.Resource.Attribute.fontProviderCerts;
@@ -6221,6 +6320,12 @@ namespace CodingCoach.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f0b003d
+			public const int ApplicationName = 2131427389;
+			
+			// aapt resource value: 0x7f0b003c
+			public const int Hello = 2131427388;
+			
 			// aapt resource value: 0x7f0b0015
 			public const int abc_action_bar_home_description = 2131427349;
 			
@@ -6317,8 +6422,8 @@ namespace CodingCoach.Droid
 			// aapt resource value: 0x7f0b0035
 			public const int character_counter_pattern = 2131427381;
 			
-			// aapt resource value: 0x7f0b003c
-			public const int library_name = 2131427388;
+			// aapt resource value: 0x7f0b003e
+			public const int library_name = 2131427390;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int mr_button_content_description = 2131427328;
