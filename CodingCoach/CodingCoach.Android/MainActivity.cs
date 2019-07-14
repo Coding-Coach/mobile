@@ -15,9 +15,9 @@ namespace CodingCoach.Droid
    [IntentFilter(
       new[] { Intent.ActionView },
       Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-      DataScheme = "smartg.android",
-      DataHost = "ia-mobile.auth0.com",
-      DataPathPrefix = "/android/smartg.android/callback")]
+      DataScheme = "io.codingcoach.mobile",
+      DataHost = "codingcoach.eu.auth0.com",
+      DataPathPrefix = "/android/io.codingcoach.mobile/callback")]
    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
    {
       protected override void OnCreate( Bundle savedInstanceState )
