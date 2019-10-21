@@ -14,8 +14,8 @@
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="We want to hear your thoughts! Feel free to join our " />
-                        <Span Text="Slack Organization" TextDecorations="Underline">
+                        <Span>We want to hear your thoughts! Feel free to join our</span>
+                        <Span>TextDecorations="Underline">Slack Organization</span>
                             <Span.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding SlackCommand}" />
                             </Span.GestureRecognizers>
