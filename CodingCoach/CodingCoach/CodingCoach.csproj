@@ -20,13 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="mentors.json" />
     <None Remove="secrets.json" />
     <None Remove="secrets.json.template" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="mentors.json" />
     <EmbeddedResource Include="secrets.json" />
   </ItemGroup>
 
@@ -49,13 +47,13 @@
     <Compile Update="CustomControls\ChannelsView.xaml.cs">
       <DependentUpon>ChannelsView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\MentorsListPage.xaml.cs">
+      <DependentUpon>MentorsListPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="CustomControls\TagsView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\StartView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

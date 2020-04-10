@@ -2,10 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:customControls="clr-namespace:CodingCoach.CustomControls;assembly=CodingCoach"
-             x:Class="CodingCoach.Views.ItemsPage"
+             x:Class="CodingCoach.Views.MentorsListPage"
              Title="{Binding Title}"
-             class="page"
-             x:Name="BrowseItemsPage">
+             class="page">
 
     <ContentPage.Resources>
         <StyleSheet Source="../Assets/styles.css" />

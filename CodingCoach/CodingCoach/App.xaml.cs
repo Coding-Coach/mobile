@@ -15,11 +15,7 @@ namespace CodingCoach
         public App()
         {
             InitializeComponent();
-            
-            DependencyService.Register<ApiAccessService>();
-            DependencyService.Register<LoadService>();
-
-            Application.Current.MainPage = new MainPage();
+            Application.Current.MainPage = new NavigationPage(new MentorsListPage());
 
             // TODO: for login implementation
             // TODO: move to navigation service

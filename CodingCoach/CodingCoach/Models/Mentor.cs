@@ -1,8 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using CodingCoach.DotNetClient.Models;
 
 namespace CodingCoach.Core.Services
 {
-   public class Mentor
+   public class MentorDto
    {
       public string                        Id                 { get; set; }
       public string                        Name               { get; set; }
@@ -23,5 +24,17 @@ namespace CodingCoach.Core.Services
    {
       public string Type { get; set; }
       public string Id   { get; set; }
+   }
+
+   public static class MentorMapper
+   {
+       public static MentorDto ToMentorDto(this Mentor mentor)
+       {
+           var mentorDto = new MentorDto();
+
+           mentorDto.Name = mentor.Name;
+
+           return mentorDto;
+       }
    }
 }

@@ -9,8 +9,8 @@ namespace CodingCoach.Services
 
       public static SecretsData Instance
       {
-         get { return _instance ?? (_instance = LoadSecrets()); }
-         set { _instance = value; }
+         get => _instance ??= LoadSecrets();
+         set => _instance = value;
       }
 
       private static SecretsData LoadSecrets()

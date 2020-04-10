@@ -151,19 +151,19 @@ namespace CodingCoach.CustomControls
       public KeyValuePair<string, string> SelectedItem
       {
          get => (KeyValuePair<string, string>) GetValue( SelectedItemProperty );
-         set { SetValue( SelectedItemProperty, value ); }
+         set => SetValue( SelectedItemProperty, value );
       }
 
       public bool IsEditing
       {
          get => (bool) GetValue( IsEditingProperty );
-         set { SetValue( IsEditingProperty, value ); }
+         set => SetValue( IsEditingProperty, value );
       }
 
       public ICommand OnSelectionCommand
       {
          get => (ICommand) GetValue( OnSelectionCommandProperty );
-         set { SetValue( OnSelectionCommandProperty, value ); }
+         set => SetValue( OnSelectionCommandProperty, value );
       }
 
       public string Text { get; private set; }

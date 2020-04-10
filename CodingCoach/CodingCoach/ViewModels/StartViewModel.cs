@@ -32,7 +32,7 @@ namespace CodingCoach.ViewModels
          {
             if (_authService.IsUserAuthenticated())
             {
-               var page = new MainPage();
+               var page = new MentorsListPage();
                Application.Current.MainPage = page;
             }
             else
