@@ -5,8 +5,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using CodingCoach.Core.Services;
 using CodingCoach.DotNetClient.Services;
+using CodingCoach.Models;
 using Xamarin.Forms;
 
 namespace CodingCoach.ViewModels

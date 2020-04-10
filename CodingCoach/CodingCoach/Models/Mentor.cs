@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using CodingCoach.DotNetClient.Models;
 
-namespace CodingCoach.Core.Services
+namespace CodingCoach.Models
 {
    public class MentorDto
    {

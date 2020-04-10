@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using CodingCoach.Core.Services;
+using CodingCoach.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

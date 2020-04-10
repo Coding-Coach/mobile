@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingCoach.Models.Constants
+﻿namespace CodingCoach.Models
 {
     public class Urls
     {
