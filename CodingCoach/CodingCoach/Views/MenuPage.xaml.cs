@@ -23,9 +23,9 @@ namespace CodingCoach.Views
          menuItems = new List<HomeMenuItem>
          {
             new HomeMenuItem {Id = MenuItemType.Browse, Title = "Mentors"},
-            new HomeMenuItem {Id = MenuItemType.About, Title = "About"},
-            new HomeMenuItem {Id = MenuItemType.Contact, Title = "Contact"},
-            new HomeMenuItem {Id = MenuItemType.Logout, Title = "Logout"}
+            //new HomeMenuItem {Id = MenuItemType.About, Title = "About"},
+            //new HomeMenuItem {Id = MenuItemType.Contact, Title = "Contact"},
+            //new HomeMenuItem {Id = MenuItemType.Logout, Title = "Logout"}
          };
 
          ListViewMenu.ItemsSource = menuItems;
