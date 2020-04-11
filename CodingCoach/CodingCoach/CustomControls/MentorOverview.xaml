@@ -38,7 +38,7 @@
                                 Spacing="0">
                                 <!--Name / Country / Favorite-->
                                 <StackLayout
-                                    Spacing="0"
+                                    Spacing="4"
                                     Orientation="Horizontal"
                                     HorizontalOptions="FillAndExpand">
                                     <Label Text="{TemplateBinding Mentor.Name}"
