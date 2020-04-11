@@ -48,8 +48,12 @@ namespace CodingCoach.ViewModels
 
         private async Task LoadMentors()
         {
+            var request = new MentorsRequest
+            {
+                Limit = 10
+            };
             Mentors.Clear();
-            var mentors = (await _mentorsService.Get()).Data;
+            var mentors = (await _mentorsService.Get(request)).Data;
             //TechList = _apiAccessService.GetTechList().Select(t => new KeyValuePair<string, string>(t, t)).ToList();
             if (mentors?.Any() ?? false)
             {

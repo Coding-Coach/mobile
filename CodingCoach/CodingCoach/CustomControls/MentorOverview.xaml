@@ -51,14 +51,14 @@
                                         HeightRequest="32"
                                         WidthRequest="32"
                                         Aspect="AspectFill" />
-                                    <Label
+                                    <!--<Label
                                         FontFamily="{StaticResource FontAwesomeIcon}"
                                         TextColor="{TemplateBinding Mentor.FavoriteColor}"
                                         FontSize="24"
                                         HorizontalOptions="End"
                                         VerticalOptions="Center"
                                         Padding="0,0,2,0"
-                                        Text="{x:Static customControls:Icon.Heart}" />
+                                        Text="{x:Static customControls:Icon.Heart}" />-->
                                 </StackLayout>
                                 <!--Title-->
                                 <Label Text="{TemplateBinding Mentor.Title}"
