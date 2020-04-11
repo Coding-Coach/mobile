@@ -1,6 +1,5 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:customControls="clr-namespace:CodingCoach.CustomControls;assembly=CodingCoach"
              x:Class="CodingCoach.Views.MentorsListPage"
              Title="{Binding Title}"
@@ -15,74 +14,17 @@
     </ContentPage.ToolbarItems>-->
 
     <StackLayout>
-        <customControls:AutoCompleteView
+        <!--<customControls:AutoCompleteView
             OnSelectionCommand="{Binding TechListSelectedCommand}"
-            ItemsSource="{Binding TechList}"/>
-        <ListView
+            ItemsSource="{Binding TechList}"/>-->
+        <CollectionView
             class="mentor-list"
-            HasUnevenRows="true"
-            SeparatorVisibility="None"
             ItemsSource="{Binding Mentors}">
-            <ListView.ItemTemplate>
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <StackLayout
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                Padding="0,55,0,10">
-                                <Frame BackgroundColor="Transparent"
-                                       HasShadow="false"
-                                       class="mentor-card">
-                                    <StackLayout>
-                                        <StackLayout
-                                            Orientation="Horizontal"
-                                            HorizontalOptions="FillAndExpand">
-                                            <Image
-                                                HorizontalOptions="Start"
-                                                Source="{Binding CountryImageSource}"
-                                                HeightRequest="32"
-                                                WidthRequest="32"
-                                                Aspect="AspectFill" />
-                                            <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
-                                                <Label FontFamily="{StaticResource FontAwesomeIcon}"
-                                                       TextColor="{Binding FavoriteColor}"
-                                                       FontSize="24"
-                                                       HorizontalOptions="End"
-                                                       Text="{x:Static customControls:Icon.Heart}" />
-                                            </StackLayout>
-                                        </StackLayout>
-                                        <StackLayout Padding="5,15,5,10"
-                                                     Orientation="Vertical">
-                                            <Label Text="{Binding Name}"
-                                                   class="mentor-name"
-                                                   HorizontalOptions="Center" />
-                                            <Label Text="{Binding Title}"
-                                                   HorizontalOptions="Center"
-                                                   class="mentor-title" />
-                                            <Label Text="{Binding Description}" StyleClass="mentor-description"
-                                                   HorizontalOptions="Center" />
-                                            <customControls:TagsView Tags="{Binding Tags, Mode=TwoWay}" />
-                                            <BoxView class="separator" />
-                                            <customControls:ChannelsView Channels="{Binding Channels, Mode=TwoWay}" />
-                                        </StackLayout>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-                            <abstractions:CircleImage
-                                VerticalOptions="Start"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                Source="{Binding Avatar}" BorderColor="Gray"
-                                BorderThickness="1"
-                                HeightRequest="120"
-                                WidthRequest="120"
-                                Aspect="AspectFill"
-                                HorizontalOptions="Center" />
-                        </Grid>
-                    </ViewCell>
+                    <customControls:MentorOverview Mentor="{Binding .}"/>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 </ContentPage>

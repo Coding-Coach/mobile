@@ -1,0 +1,81 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customControls="clr-namespace:CodingCoach.CustomControls;assembly=CodingCoach"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             ControlTemplate="{DynamicResource MentorOverviewControlTemplate}"
+             x:Class="CodingCoach.CustomControls.MentorOverview">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+                x:Key="MentorOverviewControlTemplate">
+                <Frame
+                    BackgroundColor="Transparent"
+                    HasShadow="false"
+                    class="mentor-card">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <!--Avatar-->
+                        <abstractions:CircleImage
+                            Source="{TemplateBinding Mentor.Avatar}"
+                            BorderColor="Gray"
+                            BorderThickness="1"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            Aspect="AspectFill"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center" />
+                        <StackLayout
+                            Grid.Column="1"
+                            Grid.Row="0">
+                            <StackLayout
+                                Spacing="0">
+                                <!--Name / Country / Favorite-->
+                                <StackLayout
+                                    Spacing="0"
+                                    Orientation="Horizontal"
+                                    HorizontalOptions="FillAndExpand">
+                                    <Label Text="{TemplateBinding Mentor.Name}"
+                                           class="overview-mentor-name"
+                                           HorizontalOptions="StartAndExpand" />
+                                    <Image
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Center"
+                                        Source="{TemplateBinding Mentor.CountryImageSource}"
+                                        HeightRequest="32"
+                                        WidthRequest="32"
+                                        Aspect="AspectFill" />
+                                    <Label
+                                        FontFamily="{StaticResource FontAwesomeIcon}"
+                                        TextColor="{TemplateBinding Mentor.FavoriteColor}"
+                                        FontSize="24"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Center"
+                                        Padding="0,0,2,0"
+                                        Text="{x:Static customControls:Icon.Heart}" />
+                                </StackLayout>
+                                <!--Title-->
+                                <Label Text="{TemplateBinding Mentor.Title}"
+                                       class="overview-mentor-title" />
+                            </StackLayout>
+                        </StackLayout>
+                        <!--Tags-->
+                        <StackLayout
+                            Grid.ColumnSpan="2"
+                            Grid.Column="0"
+                            Grid.Row="1">
+                            <customControls:TagsView Tags="{TemplateBinding Mentor.Tags, Mode=TwoWay}" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+</ContentView>
