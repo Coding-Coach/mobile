@@ -19,6 +19,8 @@
             ItemsSource="{Binding TechList}"/>-->
         <CollectionView
             class="mentor-list"
+            RemainingItemsThreshold="{Binding ItemsThreshold}"
+            RemainingItemsThresholdReachedCommand="{Binding LoadItemsCommand}"
             ItemsSource="{Binding Mentors}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

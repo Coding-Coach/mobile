@@ -26,12 +26,13 @@ namespace CodingCoach.ViewModels
         private async void OnTechListSelected(string key)
         {
             _techFilter = key;
-            await LoadMentors();
+            await LoadMentors(true);
         }
 
 
         public MentorsListViewModel()
         {
+            lastPage = 1;
             _mentorsService = new MentorsService();
             Title = "Mentors";
             Mentors = new ObservableCollection<MentorDto>();
@@ -46,23 +47,40 @@ namespace CodingCoach.ViewModels
             private set => SetProperty(ref _techList, value);
         }
 
-        private async Task LoadMentors()
+        private async Task LoadMentors(bool clearList = false)
         {
+            if (clearList)
+            {
+                Mentors.Clear();
+                lastPage = 1;
+            }
+
             var request = new MentorsRequest
             {
-                Limit = 10
+                Limit = 10,
+                Page = lastPage++
             };
-            Mentors.Clear();
-            var mentors = (await _mentorsService.Get(request)).Data;
+            var mentorsResponse = await _mentorsService.Get(request);
             //TechList = _apiAccessService.GetTechList().Select(t => new KeyValuePair<string, string>(t, t)).ToList();
-            if (mentors?.Any() ?? false)
+
+            if (mentorsResponse != null)
             {
-                foreach (var mentor in mentors)
+                if (!mentorsResponse.Pagination.HasMore)
+                    ItemsThreshold = -1;
+
+                if (mentorsResponse.Data?.Any() ?? false)
                 {
-                    Mentors.Add(mentor.ToMentorDto());
+                    foreach (var mentor in mentorsResponse.Data)
+                    {
+                        Mentors.Add(mentor.ToMentorDto());
+                    }
                 }
             }
+
+
         }
+
+        private static int lastPage;
 
         private async Task ExecuteLoadItemsCommand()
         {
@@ -80,6 +98,18 @@ namespace CodingCoach.ViewModels
             finally
             {
                 IsBusy = false;
+            }
+        }
+
+        private int _itemsThreshold;
+
+        public int ItemsThreshold
+        {
+            get => _itemsThreshold;
+            set
+            {
+                _itemsThreshold = value;
+                OnPropertyChanged();
             }
         }
     }
